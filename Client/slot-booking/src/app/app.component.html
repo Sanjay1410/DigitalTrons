@@ -1,0 +1,18 @@
+<section class="mainContainer">
+  <h2 class="heading">Select Slot</h2>
+  <table mat-table class="mat-elevation-z8">
+    <tr *ngFor="let item of allSlotFormat">
+      <td class="center">
+        <button 
+          mat-raised-button #tooltip="matTooltip"
+          [matTooltip]="bookedSlotDetails[item['id']] ? 'Slot is booked' : ''" 
+          [matTooltipPosition]="'right'"
+          [ngClass]="{ slotSelected: bookedSlotDetails[item['id']] }" 
+          (click)="onSlotClick(item['id'])"> {{item.text}}</button>
+          <span *ngIf="bookedSlotDetails[item['id']]">
+            &#10004;&#65039;
+          </span>
+      </td>
+    </tr>
+  </table>
+</section>

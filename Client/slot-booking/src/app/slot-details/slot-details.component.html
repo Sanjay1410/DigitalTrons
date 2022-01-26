@@ -1,0 +1,37 @@
+<section>
+    <h2 class="center" mat-dialog-title>Slot Details</h2>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <mat-dialog-content>
+            <div>
+                <p>
+                    <mat-form-field>
+                        <input type="text" matInput placeholder="First Name" formControlName="firstName">
+                        <mat-error *ngIf="isFieldInvalid('firstName')">Please field this field</mat-error>
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field>
+                        <input type="text" matInput placeholder="Last Name" formControlName="lastName">
+                        <mat-error *ngIf="isFieldInvalid('lastName')">Please field this field</mat-error>
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field>
+                        <input type="number" matInput placeholder="Phone Number" formControlName="phoneNumber">
+                        <mat-error *ngIf="form.get('phoneNumber').hasError('required')">{{'Please field this field'}}
+                        </mat-error>
+                        <mat-error *ngIf="form.get('phoneNumber').hasError('pattern')">{{'Please, Enter 10 digit Mobile
+                            Number.'}}</mat-error>
+                    </mat-form-field>
+                </p>
+            </div>
+        </mat-dialog-content>
+        <mat-dialog-actions align="end">
+            <button *ngIf="isForEdit" (click)="deleteSlot()" mat-raised-button color="warn">Delete</button>
+            <button mat-button mat-dialog-close>Cancel</button>
+            <button type="submit" mat-button>Submit</button>
+        </mat-dialog-actions>
+    </form>
+</section>

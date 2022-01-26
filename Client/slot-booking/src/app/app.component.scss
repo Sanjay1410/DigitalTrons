@@ -1,0 +1,29 @@
+.slotSelected {
+    background-color: rgb(233, 54, 54);
+}
+
+.slotAvail {
+    background-color: white;
+}
+
+.mainContainer{
+    margin-top: 1%;
+}
+
+table{
+    width: 30%;
+    background-color: wheat;
+    margin-left: 35%;
+    border-collapse: separate;
+    border-spacing: 0 1em;
+}
+
+td {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+  }
+
+.heading{
+    margin-left: 45%;
+}
