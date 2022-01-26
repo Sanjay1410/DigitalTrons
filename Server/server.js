@@ -45,9 +45,6 @@ app.get('/api/getSlot', (request, response) => {
             })
         }
     })
-    console.log("REQUESTED")
-    // response.write("SUCCESS")
-    // response.end()
 })
 
 app.post('/api/slot', (request, response) => {
@@ -62,7 +59,6 @@ app.post('/api/slot', (request, response) => {
     }).catch((error) => {
         console.log(error)
     })
-    // SlotM.save().then(() => console.log('SAVED'));
 })
 
 app.put('/api/slot', (request, response) => {
