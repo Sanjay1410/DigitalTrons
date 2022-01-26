@@ -1,6 +1,6 @@
 # Slot Booking
 
-This project is developed for booking a slot between 9:00 AM to 5: 00 PM.
+This project is developed for booking a slot between 9:00 AM to 5:00 PM.
 Project is developed in Angular, NodeJS, MongoDB, ExpressJS.
 
 
