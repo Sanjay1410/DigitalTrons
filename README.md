@@ -15,4 +15,7 @@ Run the following command-
 
 Navigate to localhost:3000
 
+![image](https://user-images.githubusercontent.com/51874127/151164413-cd142af4-b4d1-4c8d-8a3f-8a0c4ce1a543.png)
+
+
 ![image](https://user-images.githubusercontent.com/51874127/151163559-6d1aea89-a76c-4fce-bff3-77de16332040.png)
