@@ -88,13 +88,14 @@ export class AppComponent {
 			console.log(result)
 
 			this.snackBar.open('Slot Booked', 'OK', this.snackBarconfig)
+			this.getAllSlot()
 		})
 	}
 	updateSlot(payload) {
 		this.http.put('/api/slot', payload).subscribe((result) => {
 			console.log(result)
 			this.snackBar.open('Slot Updated', 'OK', this.snackBarconfig)
-
+			this.getAllSlot()
 		})
 	}
 

@@ -58,6 +58,10 @@ app.post('/api/slot', (request, response) => {
         })
     }).catch((error) => {
         console.log(error)
+        return response.status(500).json({
+            status: 'error',
+            message: 'Internal Server Error'
+        })
     })
 })
 
@@ -69,17 +73,26 @@ app.put('/api/slot', (request, response) => {
         })
     }).catch((error)=>{
         console.log(error)
+        return response.status(500).json({
+            status: 'error',
+            message: 'Internal Server Error'
+        })
     })
 })
 
 app.put('/api/deleteSlot', (request, response) => {
-    console.log(request.body)
-    Slot.deleteOne({ '_id': { $eq: request.body['slotId'] } }).then((res) => {
-        return response.status(200).json({
-            status: 'success',
-            message: 'Slot Deleted'
-        })
-    }).catch((error) => {
-        console.log(error)
+    Slot.deleteOne({ '_id': { $eq: request.body['slotId'] } }, (error)=>{
+        if(error){
+            console.log(error)
+            return response.status(500).json({
+                status: 'error',
+                message: 'Internal Server Error'
+            })
+        }else{
+            return response.status(200).json({
+                status: 'success',
+                message: 'Slot Deleted'
+            })
+        }
     })
 })
