@@ -39,7 +39,7 @@ app.get('/api/getSlot', (request, response) => {
                 error: 'Internal Server Error'
             })
         } else {
-            response.status(200).json({
+            return response.status(200).json({
                 status: 'success',
                 data: res
             })
