@@ -10,7 +10,7 @@ Run the following command-
 
 1. Goto Server Folder -> npm install
 2. Goto Client/slot-booking Folder -> npm install
-3. Goto Client Folder -> ng build --prod
+3. Goto Client/slot-booking Folder -> ng build --prod
 4. Goto Server Folder -> node server.js
 
 Navigate to localhost:3000
